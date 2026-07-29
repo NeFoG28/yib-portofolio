@@ -1,2 +1,0 @@
-# yib-portofolio
-Portofolio

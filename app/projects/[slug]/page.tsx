@@ -4,6 +4,7 @@ import { projects } from "@/data/projects";
 import ProjectHero from "@/components/sections/ProjectHero";
 import ProjectSection from "@/components/ui/ProjectSection";
 import ProjectTags from "@/components/ui/ProjecTags";
+import ProjectMedia from "@/components/ui/ProjectMedia";
 
 interface ProjectPageProps {
   params: Promise<{
@@ -33,6 +34,13 @@ export default async function ProjectPage({
       description={project.description}
       status={project.status}
     />
+
+{project.media && project.media.length > 0 && (
+  <div className="mx-auto max-w-5xl px-6 pt-20">
+    <ProjectMedia media={project.media} />
+  </div>
+)}
+
 
     <div className="mx-auto max-w-5xl px-6 py-20">
 

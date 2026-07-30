@@ -13,6 +13,19 @@ context?: string;
   implementation?: string[];
   result?: string;
   learned?: string;
+  
+media?: {
+  type: "image" | "diagram";
+  src: string;
+  alt: string;
+  caption?: string;
+}[];
+
+links?: {
+  label: string;
+  url: string;
+}[];
+
 }
 
 export const projects: Project[] = [

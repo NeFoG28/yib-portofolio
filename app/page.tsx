@@ -3,6 +3,8 @@ import Hero from "@/components/sections/Hero";
 import JourneySelector from "@/components/sections/JourneySelector";
 import About from "@/components/sections/About";
 import Eperience from "@/components/sections/Experience";
+import Skills from "@/components/sections/Skills";
+
 export default function Home() {
   return (
     <>
@@ -13,6 +15,7 @@ export default function Home() {
         <JourneySelector />
         <About />
         <Eperience />
+        <Skills />
       </main>
     </>
   );

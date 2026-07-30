@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { projects } from "@/data/projects";
 import ProjectHero from "@/components/sections/ProjectHero";
 import ProjectSection from "@/components/ui/ProjectSection";
-import ProjectTags from "@/components/ui/ProjecTags";
+import ProjectTags from "@/components/ui/ProjectTags";
 import ProjectMedia from "@/components/ui/ProjectMedia";
 
 interface ProjectPageProps {

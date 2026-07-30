@@ -6,6 +6,7 @@ import {
   useMemo,
   useState,
   ReactNode,
+  useEffect,
 } from "react";
 
 import {
@@ -30,6 +31,47 @@ export function ThemeProvider({
 }: ThemeProviderProps) {
   const [theme, setTheme] =
     useState<JourneyTheme>("networking");
+
+  const activeTheme = themes[theme];
+
+  useEffect(() => {
+    const root = document.documentElement;
+
+    root.style.setProperty(
+      "--yib-primary",
+      activeTheme.colors.primary
+    );
+
+    root.style.setProperty(
+      "--yib-secondary",
+      activeTheme.colors.secondary
+    );
+
+    root.style.setProperty(
+      "--yib-accent",
+      activeTheme.colors.accent
+    );
+
+    root.style.setProperty(
+      "--yib-background",
+      activeTheme.colors.background
+    );
+
+    root.style.setProperty(
+      "--yib-surface",
+      activeTheme.colors.surface
+    );
+
+    root.style.setProperty(
+      "--yib-text",
+      activeTheme.colors.text
+    );
+
+    root.style.setProperty(
+      "--yib-muted",
+      activeTheme.colors.muted
+    );
+  }, [activeTheme]);
 
   const value = useMemo(
     () => ({

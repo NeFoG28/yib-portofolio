@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Network,
   ShieldCheck,
@@ -6,6 +8,7 @@ import {
 } from "lucide-react";
 
 import { Journey } from "@/types/journey";
+import { useTheme } from "@/hooks/useTheme";
 
 interface Props {
   journey: Journey;
@@ -20,24 +23,27 @@ const icons = {
 
 export default function JourneyCard({ journey }: Props) {
   const Icon = icons[journey.iconName];
+  const { setTheme } = useTheme();
 
   return (
-    <div className="group rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-
-      <Icon className="mb-5 h-10 w-10 text-blue-600" />
+    <button
+      type="button"
+      onClick={() => setTheme(journey.id)}
+      className="group w-full rounded-2xl border border-slate-200 bg-yib-surface p-6 text-left transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+    >
+      <Icon className="mb-5 h-10 w-10 text-yib-primary" />
 
       <h3 className="text-xl font-bold">
         {journey.title}
       </h3>
 
-      <p className="mt-1 text-sm text-slate-500">
+      <p className="mt-1 text-sm text-yib-muted">
         {journey.subtitle}
       </p>
 
-      <p className="mt-5 text-slate-600 leading-7">
+      <p className="mt-5 leading-7 text-yib-muted">
         {journey.description}
       </p>
-
-    </div>
+    </button>
   );
 }

@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6">
+    <section className="min-h-screen flex items-center justify-center px-6 pt-20">
       <div className="max-w-4xl text-center">
 
         {/* Badge */}
@@ -17,12 +17,14 @@ export default function Hero() {
           </span>
         </h1>
 
+        {/* Subheadline */}
+        <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-gray-600">
+          Building useful solutions through Networking, Quality Assurance, Data, and Game Development.
+        </p>
+
         {/* Description */}
         <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-gray-600">
-          I build useful things through networking,
-          quality assurance, data, and game development.
-          Every journey helps me become someone
-          more useful for the next challenge.
+         I enjoy learning across different disciplines and applying that knowledge to create solutions that are practical, reliable, and meaningful. Every journey teaches me something new, and every project is an opportunity to contribute.
         </p>
 
         {/* Buttons */}

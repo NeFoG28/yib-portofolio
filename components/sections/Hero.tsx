@@ -7,7 +7,7 @@ export default function Hero() {
         <div className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-sm text-blue-700">
           🚀 Currently Building • YIB Portfolio
         </div>
-
+        
         {/* Heading */}
         <h1 className="mt-8 text-5xl font-extrabold tracking-tight text-gray-900 md:text-7xl">
           One Purpose.

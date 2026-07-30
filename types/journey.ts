@@ -1,10 +1,10 @@
-import { LucideIcon } from "lucide-react";
+import { JourneyTheme } from "@/data/themes";
 
 export interface Journey {
-  id: string;
+  id: JourneyTheme;
   title: string;
   subtitle: string;
   description: string;
-  icon: LucideIcon;
+  iconName: JourneyTheme;
   color: string;
 }

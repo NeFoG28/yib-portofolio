@@ -1,11 +1,25 @@
+import {
+  Network,
+  ShieldCheck,
+  ChartColumn,
+  Gamepad2,
+} from "lucide-react";
+
 import { Journey } from "@/types/journey";
 
 interface Props {
   journey: Journey;
 }
 
+const icons = {
+  networking: Network,
+  qa: ShieldCheck,
+  data: ChartColumn,
+  game: Gamepad2,
+};
+
 export default function JourneyCard({ journey }: Props) {
-  const Icon = journey.icon;
+  const Icon = icons[journey.iconName];
 
   return (
     <div className="group rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">

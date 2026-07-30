@@ -1,17 +1,12 @@
-import {
-  Network,
-  ShieldCheck,
-  ChartColumn,
-  Gamepad2,
-} from "lucide-react";
+import { Journey } from "@/types/journey";
 
-export const journeys = [
+export const journeys: Journey[] = [
   {
-    id: "network",
+    id: "networking",
     title: "Networking",
     subtitle: "Network Operation Center",
     description: "Keeping infrastructure reliable and connected.",
-    icon: Network,
+    iconName: "networking",
     color: "blue",
   },
   {
@@ -19,7 +14,7 @@ export const journeys = [
     title: "Quality Assurance",
     subtitle: "QA Engineer",
     description: "Ensuring quality before every release.",
-    icon: ShieldCheck,
+    iconName: "qa",
     color: "emerald",
   },
   {
@@ -27,7 +22,7 @@ export const journeys = [
     title: "Data",
     subtitle: "Data Analyst",
     description: "Turning information into valuable insight.",
-    icon: ChartColumn,
+    iconName: "data",
     color: "amber",
   },
   {
@@ -35,7 +30,7 @@ export const journeys = [
     title: "Game Development",
     subtitle: "Game Developer",
     description: "Crafting meaningful interactive experiences.",
-    icon: Gamepad2,
+    iconName: "game",
     color: "purple",
   },
 ];
